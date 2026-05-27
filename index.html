@@ -1,704 +1,355 @@
-
-
+```html
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
-    <title>Samagra- Citizen Services Portal</title>
-    <link rel="stylesheet" href="/New_Samgar_Cs_Js/css/main.css?14032023" />
-    <!-- SweetAlert2 -->
-    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="/CitizenTheme/assets/bootstrap/css/bootstrap.min.css"
-        type="text/css" />
-    <!-- ANIMATE -->
-    <link rel="stylesheet" href="/CitizenTheme/assets/animate/animate.min.css" type="text/css" />
-    <!-- WEB FONTS -->
-    <!-- ICON FONTS -->
-    <link rel="stylesheet" href="../../CitizenTheme/fonts/font-awesome/css/font-awesome.min.css"
-        type="text/css" />
-    <link rel="stylesheet" href="/CitizenTheme/fonts/ionicons/css/ionicons.min.css" type="text/css" />
-    <!-- GLOBAL STYLE -->
-    <link id="stylesheetGlobal" type="text/css" href="/CitizenTheme/css/global-style-blue.min.css?08122023"
-        rel="stylesheet" media="screen" />
-    <!-- CUSTOM STYLE -- Remove if not necessary -->
-    <link type="text/css" href="/CitizenTheme/css/custom-style.css?11032023" rel="stylesheet" />
-    <!-- FAVICON -->
-    <link href="/CitizenTheme/images/favicon.png" rel="icon" type="image/png" />
-    <link href="/CitizenTheme/cdn.nic.in/Samagra/Stylesheets/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
-    <link href="/CitizenTheme/cdn.nic.in/Samagra/Stylesheets/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
-    <script src="/CitizenTheme/cdn.nic.in/Samagra/Javascripts/minv1.8.2.js" type="text/javascript"></script>
-    <script src="/CitizenTheme/cdn.nic.in/Samagra/Javascripts/bootstrap.js" type="text/javascript"></script>
-    
-    <script src="/CitizenTheme/cdn.nic.in/Samagra/Javascripts/bootstrap-datepicker.js" type="text/javascript"></script> 
-    <script src="../../Citizen/Theme/js/bootstrap-datepicker.min.js"></script>
-    <link href="../../Citizen/Theme/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+<title>Samagra Portal</title>
 
-    <script type="text/javascript" src="/CitizenTheme/cdn.nic.in/Samagra/JavaScripts/CONFIG.js"></script>
-    <script type="text/javascript" src="/CitizenTheme/cdn.nic.in/Common/JavaScripts/JQueryValidate/v1.10.0/jquery.validate.min.js"></script>
-    <script src="/Citizen/Js/CitizenValidationClasses.js" type="text/javascript"></script>
-    <script src="/CitizenTheme/cdn.nic.in/SchOri/JavaScripts/jquery.maskedinput-1.3.min.js"
-        type="text/javascript"></script>
-    <link href="/Resources/js/Alerts/sweetalert.css" rel="stylesheet" type="text/css" />
-    <script src="/Resources/js/Alerts/sweetalert-dev.js" type="text/javascript"></script>
-    <script src="/Resource/JS/PowerMenu.js" type="text/javascript"></script>
-    <link href="../..//New_Samgar_Cs_Js/css/MyCss.css?10042023" rel="stylesheet" type="text/css" />
-    <link href="/New_Samgar_Cs_Js/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    
-    <style>
-        .Heading_Text {
-            font-size: 40px;
-        }
-    </style>
+<!-- Bootstrap -->
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/MyCss.css">
+<link rel="stylesheet" href="css/animate.min.css">
+
+<style>
+
+body{
+    margin:0;
+    padding:0;
+    background:#f5f5f5;
+    font-family:Arial,sans-serif;
+}
+
+/* TOP HEADER */
+
+.top-header{
+    background:#c2185b;
+    color:#fff;
+    padding:10px 0;
+}
+
+.top-logo{
+    display:flex;
+    align-items:center;
+}
+
+.top-logo img{
+    width:70px;
+    margin-right:10px;
+}
+
+.logo-text{
+    font-size:20px;
+    font-weight:700;
+}
+
+.subtitle{
+    display:block;
+    font-size:14px;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:#e3f2fd !important;
+}
+
+.navbar-brand{
+    display:flex;
+    align-items:center;
+    font-weight:bold;
+}
+
+.navbar-brand img{
+    width:50px;
+    margin-right:10px;
+}
+
+.nav-link{
+    font-weight:600;
+    color:#000 !important;
+}
+
+/* MARQUEE */
+
+.news-bar{
+    background:#08437d;
+    color:#fff;
+    padding:10px;
+}
+
+.news-title{
+    background:#ff1744;
+    padding:5px 10px;
+    margin-right:10px;
+    font-weight:bold;
+}
+
+/* MAIN */
+
+.main-box{
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    margin-top:20px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.main-title{
+    text-align:center;
+    font-size:32px;
+    font-weight:bold;
+    color:#08437d;
+    margin-bottom:20px;
+}
+
+.service-box{
+    padding:20px;
+    background:#f8f8f8;
+    border-radius:10px;
+    text-align:center;
+    transition:0.3s;
+    margin-bottom:20px;
+}
+
+.service-box:hover{
+    transform:translateY(-5px);
+    background:#e3f2fd;
+}
+
+.service-box i{
+    font-size:40px;
+    color:#c2185b;
+    margin-bottom:10px;
+}
+
+.footer{
+    background:#111;
+    color:#fff;
+    padding:15px;
+    text-align:center;
+    margin-top:30px;
+}
+
+</style>
+
 </head>
-   
+
 <body>
-    <form name="aspnetForm" method="post" action="./RequestLogin.aspx" id="aspnetForm">
-<div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="Z+clDpifhmSl37lYELceW5FiR2xMjRZ26UnhxHgvh++nQodLLFQS/2GA3nVIIUe9WFE/EyZFp6jyLxmNWL3Uzzu/CQfGK5uKZNAF9FBr96EbE9oYFcY0685i2GA8PuEpJ2542Xhg7kWYl/260eu/GMwzAQX9AUk6xe6oGp2RVSue8ApUcCLyoeKttyX8eQ+6QKaVt5caXim93X/sC1U6tF/mcAyZgoBug863P2ZM+JrTxicviQcnTWirC8POgo5n8ePDYCZJ48rIuoFuFbml5PvtpI9mrxxm/66JYe3hPJnCmKGxG9I6cVPCo7Y3tTK2Wx64vrN/siM2czi09TVC2H8NFBA=" />
+
+<!-- TOP HEADER -->
+
+<div class="top-header">
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+<div class="top-logo">
+
+<img src="images/headersamajik4.png">
+
+<div class="logo-text">
+समग्र सामाजिक सुरक्षा मिशन
+<span class="subtitle">मध्य प्रदेश शासन</span>
 </div>
 
-<div>
-
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="FE4D2621" />
-	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
 </div>
-        <div style="position:relative";>
-            <div id="preloader">
-                <p class="text-center content11">Please avoid clicking on "Back" or "Refresh" button, Your request is in progress <br />कृपया " बेक " एवं "रिफ्रेश" बटन क्लिक न करें, आपका अनुरोध प्रक्रियाधीन है |</p>
-            </div>
-        </div>
-        
-        <header class="header-smg-scrolly">
-            
-            <div class="top-header-smg py-1">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-12">
-                            <div class="top-logo-smg">
-                                <div class="image-logo">
-                                    <img src="/Images/headersamajik4.png" alt="Logo" />
-                                </div>
-                                <div class="logo-text-smg">समग्र सामाजिक सुरक्षा मिशन,<span class="subtitle-header"> मध्य प्रदेश शासन</span></div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-8 col-sm-12">
-                            <div class="header-info-right d-flex align-items-center h-100 justify-content-end">
-                                <ul class="smg-list">
-                                    <li>
-                                        <div class="langualge">
-                                            <span class="smg-header-icon"><i class="fa fa-language" aria-hidden="true"></i></span>
-                                            <button class="translate btn-sm btn btn-primary" id="BtnLang" value="हिंदी">English</button>
-                                        </div>
-                                    </li>
-                                    <li><a href="tel:0755-2700800"><span class="smg-header-icon"><i class="fa fa-phone" aria-hidden="true"></i></span>Helpline No.: 0755-2700800</a></li>
-                                    <li class="mr-0"><a href="mailto:samagra.support@mp.gov.in"><span class="smg-header-icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>Email: samagra.support@mp.gov.in</a></li>
-                                    
-                                </ul>
+</div>
 
-                            </div>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
+<div class="col-lg-6 text-lg-right mt-3 mt-lg-0">
 
-            
-            
-            <div class="middel-header-section">
-                <nav class="navbar navbar-expand-lg navbar-light mb-0 pt-3 pb-3" style="background-color: #e3f2fd;">
-                    <div class="container-fluid">
-                        <a class="navbar-brand p-0" href="/default.aspx">
-                            <div class="brand-logo d-flex align-items-center">
-                                <div class="nav-brand-logo">
-                                    <img src="/Images/SamagraLogo.png" alt="Samagra Logo" />
-                                </div>
-                                <h2 class="logo-title">समग्र पोर्टल</h2>
-                            </div>
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="nav navbar-nav ml-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Default.aspx"><span mlang="lang-home"></span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Public/StaticPages/AboutSSSM.aspx"><span mlang="lang-samgramission"></span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Public/StaticPages/AboutSamagra.aspx"><span mlang="lang-samagraprogram"></span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Public/StaticPages/AboutSamagraPortal.aspx"><span mlang="lang-samagraportal"></span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/KnowledgeSharing/Public/AllCirculars.aspx"><span mlang="lang-instruction"></span></a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="/KnowledgeSharing/Public/AllUserManual.aspx"><span mlang="lang-usermanual"></span></a>
-                                    
-                                    
-                                    
-                                    
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Public/StaticPages/ContactUs.aspx"><span mlang="lang-contact"></span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Public/StaticPages/privacy_policy.aspx"><span mlang="lang-privacy_policy"></span></a>
-                                </li>
-                                
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            
-        </header>
-        
-        <div class="marquee-slider">
-            <div class="container">
-                <div class="marquee-slide">
-                    <span class="breakingNews-title">Latest News</span>
-                    <marquee direction="”right”" onmouseover="stop()" onmouseout="start()">
-                        <ul class="marquee-list">
-                            <li>एक समग्र आईडी होते हुए नवीन समग्र आईडी बनवाना नियम विरुध हैं|</li>
-                            <li>नवीन समग्र आईडी बनाने से पहले ये जांच लें, कि  आपका समग्र पहले से बना हुआ तो नहीं हैं।</li>
-                            <li>नवीन समग्र बनाने के लिए आधार अनिवार्य हैं। समग्र में आधार ई- केवाईसी करने के 2 विकल्प उपलब्ध हैं ।</li>
-                            <li>1. आधार से प्राप्त मोबाईल पर ओटीपी द्वारा एवं 2. बायोमैट्रिक के माध्यम से।</li>
-                        </ul>
-                    </marquee>
-                </div>
-            </div>
-        </div>
-        
+<button class="btn btn-light btn-sm" id="BtnLang">
+English
+</button>
 
+<a href="#" class="text-white ml-3">
+<i class="fa fa-phone"></i>
+0755-2700800
+</a>
 
-        <section class="open-hour-area home-smg-section bg-light-body m-0">
-            <div class="container">
-                
-    <!-- SweetAlert2 -->
-	
+<a href="#" class="text-white ml-3">
+<i class="fa fa-envelope"></i>
+samagra.support@mp.gov.in
+</a>
 
-    <style>
-        #MasterMain {
-            padding: 10px;
-        }
-        .modal-dialog{
-            width:100%;
-        }
-        .modal-content{
-            border: 0!important;
-            box-shadow: 0px 0px !important;
-        }
-    </style>
-    <div id="MasterMain">
-        <div style="z-index: 0;" class="PageContent">
-            <script type="text/javascript" src="../../Resource/JS/Messages.js?28022023"></script>
-            
-            
-    
-    <script type="text/javascript" src="../../MultiLang/multilanguage.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $.getJSON("/MultiLang/Registration_tab_hi.json", function (data) {
-                arrLang["HI"] = data;
-                $.getJSON("/MultiLang/Registration_tab_en.json", function (data) {
-                    arrLang["EN"] = data;
-                    initialize();
-                }).fail(function () {
-                    console.log("An error has occurred.");
-                });
-            }).fail(function () {
-                console.log("An error has occurred.");
-            });
-        });
-    </script>
+</div>
 
-    <div style="z-index: 0;" class="PageContent">
-        <section class="instructions-smg-fill clear-both">
-            <div class="row">
-                <div id="ctl00_ctl00_SamagraMain_KYCcp_GridPageHeader" class="col-md-12 mb-3">
-                    <h1 class="Page_heading text-center"><span mlang="lang-UpdateProfile"></span></h1>
-                </div>
-                <div id="ctl00_ctl00_SamagraMain_KYCcp_GridLandPageHeader" class="col-md-12 mb-3" style="display: none;">
-                    <h1 class="Page_heading text-center"><span mlang="lang-lnkLandAdd"></span></h1>
-                </div>
-            </div>
-        </section>
-        <div class="form-ekyc-section">
-            <div class="row">
-                <div class="col-md-12 mx-auto">
-                    <div class="card shadow-cls smg-card-form border-0 mb-4">
-                        <div class="header-title">
-                            <div id="ctl00_ctl00_SamagraMain_KYCcp_divProfileUpdateInstruction">
-                                <h3 class="card-title m-0"><span mlang="lang-ProfileUpdateInstruction"></span></h3>
-                            </div>
-                            
-                        </div>
-                        <div class="card-body">
-                            <div class="point-list">
-                                <ul>
-                                    <li><span mlang="lang-Inst1"></span></li>
-                                    <li><span mlang="lang-Inst2"></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6 mx-auto">
-                                    <div class="form-box shadow-cls smg-card-form p-3 my-5">
-                                        <div id="ctl00_ctl00_SamagraMain_KYCcp_firstDiv">
-                                            <div class="form-group">
-                                                <span id="ctl00_ctl00_SamagraMain_KYCcp_lblmesg" style="color:Red;background-color:Yellow;font-size:Large;"></span>
+</div>
+</div>
+</div>
 
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="form-label"><span mlang="lang-samagraidenter"></span><span class="text-danger">*</span></label>
-                                                <input name="ctl00$ctl00$SamagraMain$KYCcp$txtSamagraMemberID" type="text" maxlength="9" id="ctl00_ctl00_SamagraMain_KYCcp_txtSamagraMemberID" class="form-control vd_Required vd_Numbers digits font-600 h4" onkeypress="return NumericCharcter(event)" laceholder="Enter Samagra ID" />
-                                            </div>
-                                            <div class="form-group">
-                                                <div style='font-weight:bold;font-family:Arial;width:100%;'><div style='text-align:center;margin:5px;'><img id="ccimgctrl" src="CaptchaImage.aspx?guid=7cbfb831-4b48-4df3-a305-061815ae5417-712684991-560466-1581-dgnf" border='0'></div><div style='text-align:center;margin:5px;'>कृपया कैप्चा दर्ज करें <br> Please enter captcha. <br><input id=CaptchaShow name=ctl00$ctl00$SamagraMain$KYCcp$CaptchaShow type=text size=4 maxlength=4 value=''><img id="rfcc" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALkSURBVEhLtVZJampREL17MbgDjdhtwBB0qGRu3IANuAkD4gKiBmLGySjgxEF0IDiwmduAoEnU2Gvlnwv1qPd8+v/kPyjrNVXn3GpuXRX9uT4/P+l4PNLX1xft93uazWa02+1oPp/Tdruln58fWq/XtFwuabVaacG7zWZDi8VC28AWvt/f33Q4HDQWrul0SkoS4COMJAFAAAZQJgAZSJkItvDB4iQRsHEpGcElAoDCaTAYaHsmkpHYEcFWyQg4VZLg4+ODkskkBYNBcjgchgQCAUqlUtRoNLTt+/s7uVwuKhaLJ0RKRsAEWNVwOKT7+3sT8DmJx+OUTqf1fSwWO4lI4UGmCLrdbpPP5zsBuyRXV1daezyek9QpSYCwR6PRCcHNzQ09PT1Rr9fT3QJdKpXo9vbWZAcBGUrARNBKEqAGMkVweHh40EWW7cv3r6+vFA6HTSQQ1JGzAq0kQb1eNxmDQO4PSdRqtUy2UiqVioEJrbjXodEtbIgUyQgkAWQymdDd3R15vV5yOp0mkpeXF9M+UvwA3Ww2qVAoUDQa1as5RyDfse73+zq6Wq1mELBWVmMroHy2frO+P6cVfv63aJK/rcROztnYYejCyxwip8gtcmznZPcO+vn5Wdcyn8/r2kpMxZ2FBxRbdgm6Bt2DLkI3MYmVABIKhQy/TCajMRlbyX7GaiSJFERnR4DF5XI5ky2GJmMam5F3JnaqNIZEIhF6e3szgfM9BAQ8tyCJRMJEYIwVnjGYS5KABTPq8fFRz6zxeEzdbpfK5bLesNLO7/fr2ScJgK1HvZzE19fX2kGu7l8EQ7XT6RhZYQJgK3lY4SXOAzhls1l9TljB7AQpQgRMwFiMraynIk42t9tN1WpVh40i4kDCSSiBcVJi1mGoyhoAA1jAvHj8curgBGd0EIoMG5zx0LwPrEWWEQAb/yGMv0TniADC+0h21yUCjgAEwFboKFzWiGQkTCTblyORBJwqSUBE9AvKofaf3hDaEAAAAABJRU5ErkJggg==" style ="cursor:pointer; border:none; width:22px; margin-bottom:-6px;" onclick="document.getElementById('ccimgctrl').src='CaptchaImage.aspx?guid=7cbfb831-4b48-4df3-a305-061815ae5417-712684991-560466-1581-dgnf_' + Math.random();" /></div></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="submit" name="ctl00$ctl00$SamagraMain$KYCcp$btnVerCapta" value="" id="ctl00_ctl00_SamagraMain_KYCcp_btnVerCapta" class="btn btn-info btn-large" mlang="lang-getMob" />
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- First Entry Login -->
+<!-- NAVBAR -->
 
+<nav class="navbar navbar-expand-lg navbar-light">
 
-    </div>
-    <input type="hidden" name="ctl00$ctl00$SamagraMain$KYCcp$hdage" id="ctl00_ctl00_SamagraMain_KYCcp_hdage" />
-    <input type="hidden" name="ctl00$ctl00$SamagraMain$KYCcp$hdnLRD" id="ctl00_ctl00_SamagraMain_KYCcp_hdnLRD" />
-    <input type="hidden" name="ctl00$ctl00$SamagraMain$KYCcp$hdnDept" id="ctl00_ctl00_SamagraMain_KYCcp_hdnDept" />
-    <style type="text/css">
-        .bbtn {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 12px 12px;
-            text-align: left;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 18px;
-            font-weight: 500;
-            margin: 1px 0px;
-            cursor: pointer;
-            min-width: 220px;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-            border-top-right-radius: 100px;
-            border-bottom-right-radius: 100px;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            border-left: 10px solid green;
-        }
-    </style>
+<div class="container">
 
-    <script src="https://cdn.nic.in/SchOri/JavaScripts/jquery.maskedinput-1.3.min.js"
-        type="text/javascript"></script>
-    <script src="/Bootstrap/js/Masters_DDL_Fill.js" type="text/javascript"></script>
+<a class="navbar-brand" href="#">
 
-    <script type="text/javascript">
-        var txtSamagraMemberID, btnshow, btnSendtp, btnSendtp2;
+<img src="images/SamagraLogo.png">
 
-        function NumericCharcter(e) {
-            var charCode = (e.which) ? e.which : e.keyCode;
-            if ((charCode >= 48 && charCode <= 57)) {
+समग्र पोर्टल
 
-                return true;
-            }
-            if (charCode == 8) { return true; }
-            if (charCode == 9) { return true; }
-            else { return false; }
-        }
+</a>
 
+<button class="navbar-toggler"
+type="button"
+data-toggle="collapse"
+data-target="#navbarNav">
 
-        $(document).ready(function () {
-            txtSamagraMemberID = $("#ctl00_ctl00_SamagraMain_KYCcp_txtSamagraMemberID");
-            txtMobNew = ''; 
-            txtOtpVeryfy = $("#ctl00_ctl00_SamagraMain_KYCcp_txtOtpVeryfy");
-            hdnTimmer = $("#ctl00_ctl00_SamagraMain_KYCcp_hdnTimmer");
-            btnSendtp = $("#btnSendtp");
-            btnSendtp2 = $("#btnSendtp2");
-            //20220912
-            //txtSamagraMemberID.bind('copy paste cut', function (e) { e.preventDefault(); });
-            //txtMobNew.bind('copy paste cut', function (e) { e.preventDefault(); });
-            //txtOtpVeryfy.bind('copy paste cut', function (e) { e.preventDefault(); });
+<span class="navbar-toggler-icon"></span>
 
-            //txtSamagraMemberID.blur(function () {
-            //    if (txtSamagraMemberID.val() != '' && !isNaN(txtSamagraMemberID.val())) {
-            //        if (txtSamagraMemberID.val().length != 9) {
-            //            alert("Please Enter SamagraId"); txtSamagraMemberID.val('');
-            //        }
-            //    }
-            //});
-            $("[id*=btnSendtp2]").css("display", "none");
-            txtMobNew.blur(function () {
-                if (txtMobNew.val() != '' && !isNaN(txtMobNew.val())) {
-                    if (txtMobNew.val().length != 10) {
-                        message_error("Error", "कृपया मोबाइल न. दर्ज करें | <br /> Please enter mobile no."); txtMobNew.val('');
-                        return false;
-                    }
-                }
-            });
+</button>
 
-            txtOtpVeryfy.blur(function () {
-                if (txtOtpVeryfy.val() != '' && !isNaN(txtOtpVeryfy.val())) {
-                    if (txtOtpVeryfy.val().length != 6) {
-                        message_error("Error", "कृपया सही ओटीपी दर्ज करें | <br/>  Please enter valid OTP."); txtOtpVeryfy.val('');
-                        return false;
-                    }
-                }
-            });
+<div class="collapse navbar-collapse" id="navbarNav">
 
-            function CheckMobileNumber(MobileNo) {
-                if (parseInt(MobileNo) > 6000000000 && (parseInt(MobileNo) % 100000) != 0 && (parseInt(MobileNo) % 1111111111) != 0) {
-                    return true;
-                }
-                else { return false; }
-            }
+<ul class="navbar-nav ml-auto">
 
-            if (hdnTimmer.val() == "1") {
-                Timmer();
-            }
+<li class="nav-item">
+<a class="nav-link" href="#">Home</a>
+</li>
 
-            btnSendtp.click(function () {
-                if (!CheckMobileNumber(txtMobNew.val())) {
-                    message_error("Error", "आपका ई-केवाईसी पूर्ण नहीं है, कृपया पहले ई-केवाईसी करें | <br /> Your e-KYC is not complete, Please do e-kyc.");
-                    txtMobNew.val('');
-                    return false;
-                }
-            });
-        });
+<li class="nav-item">
+<a class="nav-link" href="#">About</a>
+</li>
 
-        function Timmer() {
-            var genotpint = 60;
-            var ti = setInterval(function () {
-                //btnGenerateotp;
-                $("[id*=btnSendtp]").css("display", "none");
-                $("[id*=btnSendtp2]").css("display", "none");
-                if (localStorage.getItem("Lang") == "HI") {
-                    $("[id*=btnSendOTP2]").val("पुन: ओटीपी भेजें")
-                    $("[id*=lblCount]").text("पुन: ओटीपी भेजें  " + genotpint);
-                }
-                else {
+<li class="nav-item">
+<a class="nav-link" href="#">Services</a>
+</li>
 
-                    $("[id*=btnSendOTP2]").val("Resend OTP");
-                    $("[id*=lblCount]").text("Resend OTP after  " + genotpint);
-                }
+<li class="nav-item">
+<a class="nav-link" href="#">Contact</a>
+</li>
 
-                $("[id*=btnSendOTP]").css("display", "none");
-                genotpint--;
-                if (genotpint < 0) {
-                    $("[id*=btnSendtp2]").css("display", "block");
-                    $("[id*=lblCount]").text("");
-                    clearInterval(ti);
-                }
-            }, 1000);
-        }
+</ul>
 
-        /*function Timmer() {
-            var genotpint = 90;
-            var ti = setInterval(function () {
+</div>
 
-                //btnGenerateotp;
-                $("[id*=lblCount]").text("पुनः ओटीपी भेंजे | / Re-send otp after. : " + genotpint);
-                $("[id*=btnSendtp]").css("display", "none");
-                $("[id*=btnSendtp2]").css("display", "none");
-                genotpint--;
-                if (genotpint < 0) {
-                    $("[id*=btnSendtp2]").css("display", "block");
-                    $("[id*=lblCount]").text("");
-                    clearInterval(ti);
-                }
-            }, 1000);
+</div>
 
-        }*/
-    </script>
+</nav>
 
-  
+<!-- NEWS -->
 
+<div class="news-bar">
 
-        </div>
-    </div>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $.ajax({
-                type: "GET",
-                url: "/Citizen/SiteMaps/SiteMap.aspx",
-                dataType: "json",
-                complete: function (data) {
-                    str = data.responseText;
-                    //__SiteMapContainer.append(str.substring(0, str.lastIndexOf("<!DOCTYPE")));
-                    __SiteMapContainer.append(str);
-                }
-            });
+<div class="container d-flex align-items-center">
 
+<span class="news-title">
+Latest News
+</span>
 
-            ////$("#___dvMessage").css('left', '15%');
-            //$("#___dvMessage").css('width', '40%');
-            //$("#___dvMessage").css('height', '50%');
-            //$("#___dvMessage").css('margin-top', '131px');
-            //$("#___dvMessage").css('margin-left', '460px');
-            //$("#___dvMessage").css('background-color', 'white');
-        });
-    </script>
+<marquee>
 
-            </div>
-        </section>
-         
-        <footer class="footer-area pt-0 pb-0">
-            <div class="footer-bottom">
-                <div class="container">
-                    <div class="footer-content">
-                        <div class="copyright-content">
-                            <a href="/default.aspx">
-                                
-                                <span>Samagra  Samajik Suraksha Mission, Govt. of
-                                Madhya Pradesh.</span>
-                            </a>
-                        </div>
-                        
-                        <div class="design-dev">
-                            <p><span>Designed &amp; developed by</span> <a href="https://www.mpsedc.mp.gov.in/" class="Notification">MPSeDC.</a> <span class="text-right text-black"  style="position: absolute;right: 1%;color:black;"><label id="ctl00_ctl00_S_Name">Brahmaputra</label></span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+एक समग्र आईडी होते हुए नवीन समग्र आईडी बनवाना नियम विरुद्ध हैं |
+नवीन समग्र आईडी बनाने से पहले जांच करें |
 
-        <!-- Essential JSs -->
-       >
-        <script type="text/javascript" src="/CitizenTheme/assets/bootstrap/js/tooltip.js"></script>
-        <!-- Smooth scroll -->
-       
-        
-        <script type="text/javascript" src="/CitizenTheme/js/bootstrap-extensions/bootstrap.slide-menu.js"></script>
-        <script type="text/javascript" src="/CitizenTheme/js/modernizr.custom.js"></script>
-        <script type="text/javascript" src="/CitizenTheme/js/jquery.mousewheel-3.0.6.pack.js"></script>
-        <script type="text/javascript" src="/CitizenTheme/js/jquery.easing.js"></script>
-        <script type="text/javascript" src="/CitizenTheme/js/classie.js"></script>
-        <!-- Assets - Required -->
-        <script type="text/javascript" src="/CitizenTheme/assets/parallax/parallax.min.js"></script>
-        <script type="text/javascript" src="/CitizenTheme/assets/page-scroller/jquery.ui.totop.min.js"></script>
-        <script type="text/javascript" src="/CitizenTheme/assets/waypoints/waypoints.min.js"></script>
-        <!-- Assets - Optional (keep what you need) -->
-        <!-- Sidebar transitions -->
-        <script type="text/javascript" src="/CitizenTheme/js/sidebar-transitions/sidebar-transitions.js"></script>
-        
-        <!-- Media gallery view -->
-        <script type="text/javascript" src="/CitizenTheme/assets/fancybox/jquery.fancybox.pack8cbb.js?v=2.1.5"></script>
-        <!-- Animated counter -->
-        <script type="text/javascript" src="/CitizenTheme/assets/milestone-counter/jquery.countTo.js"></script>
-        <!-- Animated pie charts -->
-        <script type="text/javascript" src="/CitizenTheme/assets/easy-pie-chart/js/jquery.easypiechart.js"></script>
-        <!-- Owl carousel - Touch enabled carousel -->
-        <script type="text/javascript" src="/CitizenTheme/assets/owl-carousel/js/owl.carousel.min.js"></script>
-        <!-- Cross-browser responsivity scripts -->
-        <!--[if lt IE 9]>
-         <script src="js/html5shiv.js"></script>
-         <script src="js/respond.min.js"></script>
-         <![endif]-->
-        <!-- Google Analitycs JS -->
-        <script type="text/javascript" src="/CitizenTheme/js/dvs.ga.js"></script>
-        <!-- Style and Demo switcher -->
-        <script type="text/javascript" src="/CitizenTheme/js/dvs.switcher.js"></script>
-        <script type="text/javascript" src="/CitizenTheme/js/jquery.cookie.js"></script>
-        <!-- App JS -->
-        <script type="text/javascript" src="/CitizenTheme/js/dvs.app.js"></script>
-        
-    </form>
- 
-    <script type="text/javascript">
-        var str = "", __SiteMapContainer, PreMonthModal;
-        var isT = false
-        var toogleWidth = 570; //  value (570,660,760,850)
-        var winWidth = $(document).width() - 90;
-        toogleWidth = toogleWidth <= winWidth ? toogleWidth : winWidth;
-        $(document).ready(function () {
+</marquee>
 
+</div>
 
-            $("#dvUp button").css({ 'width': '250px', 'text-align': 'left' });
-            $("#dvtoggel button").popover({ 'placement': 'left' });
-            $("#dvWindow").css({ 'width': toogleWidth - 50, 'height': $('#dvtoggel').height() - 40 });
-            __SiteMapContainer = $('#SiteMapContainer');
-            PreMonthModal = $("#dvSuccessMsg");
-            //$(".date_picker").mask("12/99/9999");
-            //$(".date_picker").wrap('<div class="input-append date DB_datepicker" data-date="" data-date-format="mm/dd/yyyy"></div>');
-            //$(".date_picker").after('<span class="add-on"><i class="icon-th"/></span>');
-            //$(".DB_datepicker").datepicker({ 'format': 'mm/dd/yyyy', 'weekStart': 1, 'autoclose': 'true' })
-            //    .on('changeDate', function (ev) {
-            //        if (ev.viewMode == "days") {
-            //            $(this).datepicker('hide');
-            //        }
-            //    }).on('show', function (ev) {
-            //        var t = $(this).find("input").val();
-            //        $(this).data({ date: t }).datepicker('update');
-            //    });
-            //$(".date_picker").addClass('vd_Date');
+</div>
 
-            qlDv = $("#QLinks");
-            $.ajax({
-                type: "GET",
-                url: "/Handlers/GetUserProfile.ashx",
-                dataType: "json",
-                complete: function (data) {
-                    str = data.responseText + $("#tmpDV").html();
-                    $("#btnProfile").PopoverMenu({
-                        title: '----- My Profile ----- ',
-                        content: str,
-                        animation: true,
-                        html: true,
-                        placement: 'bottom',
-                        selector: false,
-                        trigger: 'click'
-                    }).click(function (e) {
-                        var isVisible = $('#btnProfile').data('PopoverMenu').tip().hasClass('in');
-                        if (isVisible) {
-                            $("#btnProfile i").removeClass("icon-chevron-down").addClass("icon-chevron-up");
-                        }
-                        else {
-                            $("#btnProfile i").removeClass("icon-chevron-up").addClass("icon-chevron-down");
-                        };
-                    });
-                }
-            });
+<!-- MAIN -->
 
-            $(".PerformClick").click(function () {
-                if ($("form").valid()) {
-                    return true;
-                }
-                else {
-                    hideLoder();
-                    Message("संदेश", "कृपया जानकारी प्रविष्ट करें !!! / Please enter information.");
-                    return false;
-                }
-            });
+<div class="container">
 
+<div class="main-box animated fadeIn">
 
-        });
-        function isNumber(evt) {
-            evt = (evt) ? evt : window.event;
-            var charCode = (evt.which) ? evt.which : evt.keyCode;
-            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-                return false;
-            }
-            return true;
-        }
-        var object = { status: false, ele: null };
-        function conFunction(ev, text, title) {
-            var evnt = ev;
-            if (object.status) {
-                object.status = false;
-                return true;
-            }
-            Swal.fire({
-                title: title,
-                text: text,
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes / हाँ ',
-                cancelButtonText: 'No / नहीं'
+<h1 class="main-title">
+समग्र नागरिक सेवा पोर्टल
+</h1>
 
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    object.status = true;
-                    object.ele = evnt;
-                    evnt.target.click();
-                }
-            })
+<div class="row">
 
-            return object.status;
-        };
-        function conFunctionWith_Eve(ev, text, title) {
-            /*var evnt = ev;*/
-            if (object.status) { return true; }
-            Swal.fire({
-                title: title,
-                text: text,
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes / हाँ ',
-                cancelButtonText: 'No / नहीं'
+<div class="col-md-4">
 
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    object.status = true;
-                    //object.ele = evnt;
-                    //evnt.target.click();
-                }
-            })
+<div class="service-box">
 
-            return object.status;
-        };
+<i class="fa fa-id-card"></i>
 
-    </script>
-    <script>
-        function showLoder() {
-            var $preloader = $('#preloader');
-            $preloader.show("Hello");
-        }
-        function hideLoder() {
-            var $preloader = $('#preloader');
-            $preloader.hide();
-        }
-    </script>
-	
-      <style>
-        /* readonly ko disabled ki tarah dikhana */
-        .readonly-look {
-            background-color: #e9ecef;
-            color: #6c757d;
-            cursor: not-allowed;
-        }
-    </style>
-    <script type="text/javascript">
-        // Disable right-click everywhere (all pages)
-        document.addEventListener("contextmenu", function (e) {
-            e.preventDefault();
-            return false;
-        });
+<h4>समग्र आईडी</h4>
 
-        // Disable F12
-        document.addEventListener("keydown", function (event) {
-            if (event.keyCode === 123) { // F12
-                event.preventDefault();
-                return false;
-            }
+<p>नई समग्र आईडी बनाएँ</p>
 
-            // Extra protection (optional): Disable Ctrl+Shift+I, Ctrl+U, Ctrl+S
-            if ((event.ctrlKey && event.shiftKey && event.keyCode === 73) || // Ctrl+Shift+I
-                (event.ctrlKey && event.keyCode === 85) || // Ctrl+U
-                (event.ctrlKey && event.keyCode === 83)) { // Ctrl+S
-                event.preventDefault();
-                return false;
-            }
-        });
+</div>
 
-        
-    </script>
-     
+</div>
+
+<div class="col-md-4">
+
+<div class="service-box">
+
+<i class="fa fa-user"></i>
+
+<h4>eKYC</h4>
+
+<p>आधार eKYC सेवाएँ</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="service-box">
+
+<i class="fa fa-file"></i>
+
+<h4>डाउनलोड</h4>
+
+<p>समग्र कार्ड डाउनलोड करें</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+© 2026 Samagra Portal | All Rights Reserved
+
+</div>
+
+<!-- JS -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/Masters_DDL_Fill.js"></script>
+<script src="js/multilanguage.js"></script>
+
+<script>
+
+$("#BtnLang").click(function(){
+
+if($(this).text()=="English"){
+$(this).text("हिंदी");
+}else{
+$(this).text("English");
+}
+
+});
+
+</script>
+
 </body>
 </html>
+```
